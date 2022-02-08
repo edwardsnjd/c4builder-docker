@@ -1,6 +1,6 @@
 # Dockerised c4builder
 
-`c4builder` is a command line tool for generating C4 architecture diagrams and documentation.
+[`c4builder`](https://github.com/adrianvlupu/C4-Builder) is a command line tool for generating C4 architecture diagrams and documentation.
 
 This is an experimentation repo to dockerise the toolchain for ease of use.
 

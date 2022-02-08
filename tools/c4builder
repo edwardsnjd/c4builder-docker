@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+docker run \
+  --rm \
+  --interactive \
+  -t \
+  --volume "$(pwd)":/home/work \
+  --workdir /home/work \
+  --user "$(id -u)":"$(id -g)" \
+  --init \
+  c4builder \
+  "$@"

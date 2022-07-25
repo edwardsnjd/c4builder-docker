@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-docker build -t c4builder tools/

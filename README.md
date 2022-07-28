@@ -1,26 +1,10 @@
-# Dockerised c4builder
+# Tooling
 
-[`c4builder`](https://github.com/adrianvlupu/C4-Builder) is a command line tool for generating C4 architecture diagrams and documentation.
-
-This is an experimentation repo to dockerise the toolchain for ease of use.
-
-## Usage
-
-```bash
-./tools/build      # build your local docker image
-./tools/c4builder  # (re)generate the documentation
-```
-
-## Files
+These scripts will let you create and use a dockerised version of `c4builder`, a command line tool to generate pretty system documentation (including diagrams) from plain text source files:
 
 ```
-├── src                      # source input files
-│   ├── context.md           #  - markdown for documentation
-│   └── context.puml         #  - PlantUML for diagrams
-├── docs                     # generated output files
-│   └── Documentation.md
-└── tools                    # scripts to run c4builder in docker
-    ├── Dockerfile
-    ├── build
-    └── c4builder
+├── c4builder   # Binstub to run the docker image
+├── Dockerfile  # Dockerfile for dockerised c4builder
+├── Makefile    # Script to build and install the docker image
+└── README.md   # This file
 ```

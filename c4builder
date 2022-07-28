@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Usage: c4builder [args...]
+#
+# This is a bin stub to run c4builder inside a docker container.
+# All supplied options are passed through to the underlying `c4builder`
+# executable.
+
+function main() {
+  local publish=""
+  if [[ "$1" == "site" ]]; then
+    publish='--publish 3000:3000'
+  fi
+
+  docker run \
+    --rm \
+    --interactive \
+    -t \
+    --volume "$(pwd)":/home/work \
+    --workdir /home/work \
+    --user "$(id -u)":"$(id -g)" \
+    ${publish} \
+    --init \
+    c4builder \
+    "$@"
+}
+
+main "$@"
